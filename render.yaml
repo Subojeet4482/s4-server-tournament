@@ -1,0 +1,83 @@
+services:
+  - type: web
+    name: ff-server4-backup
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: SERVER_ID
+        sync: false
+      - key: DB1_FIREBASE_CREDENTIALS_B64
+        sync: false
+      - key: DB2_FIREBASE_CREDENTIALS_B64
+        sync: false
+      - key: DB3_FIREBASE_CREDENTIALS_B64
+        sync: false
+      - key: DB4_FIREBASE_CREDENTIALS_B64
+        sync: false
+      - key: S1_URL
+        sync: false
+      - key: S2_URL
+        sync: false
+      - key: S3_URL
+        sync: false
+      - key: S5_URL
+        sync: false
+      - key: ADMIN_API_KEY
+        sync: false
+      - key: MIN_WITHDRAW
+        sync: false
+      - key: MAX_WITHDRAW
+        sync: false
+      - key: WITHDRAW_FEE
+        sync: false
+      - key: MIN_DEPOSIT
+        sync: false
+      - key: DEPOSIT_GIVEUP_MIN
+        sync: false
+      - key: HISTORY_RETENTION_DAYS
+        sync: false
+      - key: GEO_ENABLED
+        sync: false
+      - key: GEO_BLOCKED_STATES
+        sync: false
+      - key: GEO_PROVIDERS
+        sync: false
+      - key: IPINFO_TOKEN
+        sync: false
+      - key: GEO_FAIL_CLOSED
+        sync: false
+      - key: GEO_STICKY_DAYS
+        sync: false
+      - key: STATE_CHANGE_DAYS
+        sync: false
+      - key: FRAUD_ACTION
+        sync: false
+      - key: MAX_ACCOUNTS_PER_DEVICE
+        sync: false
+      - key: MAX_ACCOUNTS_PER_IP
+        sync: false
+      - key: AUTO_BAN_WINDOW_DAYS
+        sync: false
+      - key: BACKUP_AUTO
+        sync: false
+      - key: BACKUP_EVERY_HOURS
+        sync: false
+      - key: BACKUP_KEEP
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: INTERNAL_KEY
+        sync: false
+      - key: REQUIRE_LB
+        sync: false
+      - key: KEEPALIVE
+        sync: false
+      - key: KEEPALIVE_INTERVAL
+        sync: false
+      - key: THREADS
+        sync: false
+      - key: SITE_URL
+        sync: false
